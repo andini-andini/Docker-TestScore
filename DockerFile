@@ -1,0 +1,12 @@
+FROM openjdk:8-jdk-alpine
+MAINTAINER Amelia_Widya <1941720025@student.polinema.ac.id>
+RUN mkdir -p /java
+WORKDIR /java
+
+COPY testScore.java /java
+
+#compile file java
+RUN javac testScore.java
+
+#running java
+ENTRYPOINT java testScore
